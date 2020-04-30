@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+   <listeners>
+       <listener class-name="paxTransport.universal.Listeners"/>
+   </listeners>
+    <test verbose="2" preserve-order="true"
+          name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
+        <classes>
+            <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.account_mgmt.SignInSignOutTest"/>
+        </classes>
+    </test>
+</suite>
