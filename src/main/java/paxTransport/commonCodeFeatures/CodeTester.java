@@ -1,4 +1,4 @@
-package paxTransport.universal;
+package paxTransport.commonCodeFeatures;
 
 public class CodeTester {
 	public static void main(String[] args){

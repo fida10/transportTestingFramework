@@ -1,4 +1,4 @@
-package paxTransport.universal;
+package paxTransport.commonCodeFeatures;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import static paxTransport.universal.HelperMethods.getPathToProps;
+import static paxTransport.commonCodeFeatures.HelperMethods.getPathToProps;
 
 public class Initializer {
 	public static Properties proUniv;

@@ -1,10 +1,10 @@
-package paxTransport.universal;
+package paxTransport.commonCodeFeatures;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 
-import static paxTransport.universal.Initializer.dr;
+import static paxTransport.commonCodeFeatures.Initializer.dr;
 
 public class HelperMethods {
 	public static String getAbsPath(){

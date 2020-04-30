@@ -5,8 +5,8 @@ import org.testng.annotations.BeforeSuite;
 
 import java.io.IOException;
 
-import static paxTransport.universal.Initializer.initialStartUpTasksUnifiedMethod;
-import static paxTransport.universal.Initializer.quitter;
+import static paxTransport.commonCodeFeatures.Initializer.initialStartUpTasksUnifiedMethod;
+import static paxTransport.commonCodeFeatures.Initializer.quitter;
 
 public class StartUpTest {
 	@BeforeSuite

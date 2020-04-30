@@ -3,19 +3,22 @@ package paxTransport.airlines.deltaAirLines.account_mgmt;
 import org.testng.annotations.Test;
 import paxTransport.airlines.deltaAirLines.onStartUp.VerificationTest;
 
-import static paxTransport.commonWebSiteFeatures.account_mgmt.SignInSignOut.signIn;
-import static paxTransport.commonWebSiteFeatures.account_mgmt.SignInSignOut.signOut;
-import static paxTransport.commonWebSiteFeatures.randomFeatures.CloseDialogBox.closePopUpDialogBox;
+import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
+import static paxTransport.commonWebSiteFeatures.inputBox.StaleElementInputBoxHandling.handleStaleElement_InputBox;
+import static paxTransport.commonWebSiteFeatures.clicking.CloseDialogBox.closePopUpDialogBox;
 
 public class SignInSignOutTest extends VerificationTest {
 	@Test
-	public static void loginTest() throws InterruptedException{
-		signIn("xpathLogInButton", "xpathUserNameInputBox", "xpathPasswordInputBox", "xpathLogInSubmitButton");
+	public static void validLoginTest() throws InterruptedException{
+		clickAnyButton("xpathLogInButton"); //clicks the login button
+		handleStaleElement_InputBox("xpathUserNameInputBox", "validUserName"); //takes care of username portion
+		handleStaleElement_InputBox("xpathPasswordInputBox", "validPassword"); //takes care of password portion
+		clickAnyButton("xpathLogInSubmitButton"); //clicks the submit button
 	}
-	@Test (dependsOnMethods = "loginTest")
+	@Test (dependsOnMethods = "validLoginTest")
 	public static void logout(){
 		closePopUpDialogBox("xpathCloseFeedBackPopUp");
 		SignInSignOut.displayLogOutButton("xpathOpenAccountOptions");
-		signOut("xpathLogOutButton");
+		clickAnyButton("xpathLogOutButton"); //clicks the logout button
 	}
 }

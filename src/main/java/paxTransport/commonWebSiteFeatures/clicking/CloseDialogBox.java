@@ -1,11 +1,11 @@
-package paxTransport.commonWebSiteFeatures.randomFeatures;
+package paxTransport.commonWebSiteFeatures.clicking;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.interactions.Actions;
 
-import static paxTransport.universal.Initializer.dr;
-import static paxTransport.universal.Initializer.proSpecific;
+import static paxTransport.commonCodeFeatures.Initializer.dr;
+import static paxTransport.commonCodeFeatures.Initializer.proSpecific;
 
 public class CloseDialogBox {
 	public static void closePopUpDialogBox(String xpathClosePopUpButtonProp){ //good for handling the random dialog boxes (i.e. for surveys, etc.) that appear sometimes and stop workflow.
