@@ -1,3 +1,6 @@
+paxTransport/airlines/deltaAirLines/trip_mgmt/TripSelectorTest.class
+paxTransport/airlines/deltaAirLines/trip_mgmt/ArriveDatePickerTest.class
+paxTransport/airlines/deltaAirLines/onStartUp/StartUpTest.class
+paxTransport/commonCodeFeatures/ClearFoldersTest.class
 paxTransport/airlines/deltaAirLines/account_mgmt/SignInSignOutTest.class
 paxTransport/airlines/deltaAirLines/onStartUp/VerificationTest.class
-paxTransport/airlines/deltaAirLines/onStartUp/StartUpTest.class

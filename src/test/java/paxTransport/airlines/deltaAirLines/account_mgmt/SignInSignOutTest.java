@@ -6,7 +6,7 @@ import paxTransport.airlines.deltaAirLines.onStartUp.VerificationTest;
 import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
 import static paxTransport.commonWebSiteFeatures.inputBox.StaleElementInputBoxHandling.handleStaleElement_InputBox;
 import static paxTransport.commonWebSiteFeatures.clicking.CloseDialogBox.closePopUpDialogBox;
-
+//program to use parameters to increase dynamic nature
 public class SignInSignOutTest extends VerificationTest {
 	@Test
 	public static void validLoginTest() throws InterruptedException{

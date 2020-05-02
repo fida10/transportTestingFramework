@@ -7,7 +7,7 @@ import static paxTransport.commonCodeFeatures.Initializer.proSpecific;
 
 public class VerificationTest {
 	@BeforeClass
-	public static void urlVerificationTest(){
+	public static void urlVerificationTest(){ //verifies that test is running on correct URL
 		uRLVerificationMethod(proSpecific.getProperty("homeURL"));
 	}
 }

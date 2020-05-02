@@ -4,6 +4,7 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import static paxTransport.commonCodeFeatures.ScreenShotMethods.mkDirFromDatePath;
 import static paxTransport.commonCodeFeatures.ScreenShotMethods.screenShotTaker;
 
 public class Listeners implements ITestListener {
@@ -39,8 +40,7 @@ public class Listeners implements ITestListener {
 
 	@Override
 	public void onStart(ITestContext context) {
-		//screenShotTaker("suitestart");
-
+		mkDirFromDatePath();
 	}
 
 	@Override
