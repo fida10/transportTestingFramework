@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="testNG-delta-trip_mgmt-RoundTrip">
+    <!-- StartUpTest -->
+    <parameter name="specificPropertiesFile" value="deltaAirLinesProperties.properties"/>
+    <parameter name="browserToUse" value="chrome"/> <!-- Change browser directly here -->
+    <!-- DepartureAndArrivalCityPicker -->
+    <parameter name="xpathOpenDepCitySelectorProp" value="xpathOpenDepCitySelector"/>
+    <parameter name="depCityCodeProp" value="roundTripDepCityCode"/>
+    <parameter name="xpathCityAutoDropDownDynamicXpathProp" value="xpathCityAutoDropDownDynamicXpath"/>
+    <parameter name="xpathCityAutoDropDownCloseXpathProp" value="xpathCityAutoDropDownCloseXpath"/>
+
+    <parameter name="xpathOpenArrCitySelectorProp" value="xpathOpenArrCitySelector"/>
+
+    <parameter name="arrCityCodeProp" value="roundTripArrCityCode"/>
+    <parameter name="xpathCityAutoDropDownDynamicXpathProp" value="xpathCityAutoDropDownDynamicXpath"/>
+
+    <!-- TripSelectorTest -->
+    <parameter name="xpathTripTypeSelectorProp" value="xpathTripTypeSelector"/>
+    <parameter name="xpathTripTypeOptionSelectorProp" value="xpathTripTypeRoundTripSelector"/>
+    <!-- DepartDatePickerTest -->
+    <parameter name="xpathDepartDatePickerOpenerProp" value="xpathDepartDatePickerOpener"/>
+    <parameter name="xpathDepartPathToOpenFirstBoxYearProp" value="xpathDepartPathToOpenFirstBoxYear"/>
+    <parameter name="xpathDepartPathToOpenFirstBoxMonthProp" value="xpathDepartPathToOpenFirstBoxMonth"/>
+    <parameter name="xpathDepartPathToOpenSecondBoxYearProp" value="xpathDepartPathToOpenSecondBoxYear"/>
+    <parameter name="xpathDepartPathToOpenSecondBoxMonthProp" value="xpathDepartPathToOpenSecondBoxMonth"/>
+    <parameter name="departDateYearProp" value="departDateYear"/>
+    <parameter name="departDateMonthFirstLetterCapitalProp" value="departDateMonthFirstLetterCapital"/>
+    <parameter name="xpathDepartPathToNextArrowProp" value="xpathDepartPathToNextArrow"/>
+    <parameter name="xpathDepartNumericDatePathFirstBoxProp" value="xpathDepartNumericDatePathFirstBox"/>
+    <parameter name="xpathDepartNumericDatePathSecondBoxProp" value="xpathDepartNumericDatePathSecondBox"/>
+    <parameter name="departDateNumericDateProp" value="departDateNumericDate"/>
+
+    <parameter name="xpathDepartDatePickerDoneButtonProp" value="xpathDepartDatePickerDoneButton"/>
+    <!-- ArriveDatePickerTest -->
+    <parameter name="xpathArriveDatePickerOpenerProp" value="xpathArriveDatePickerOpener"/>
+    <parameter name="xpathArrivePathToOpenFirstBoxYearProp" value="xpathArrivePathToOpenFirstBoxYear"/>
+    <parameter name="xpathArrivePathToOpenFirstBoxMonthProp" value="xpathArrivePathToOpenFirstBoxMonth"/>
+    <parameter name="xpathArrivePathToOpenSecondBoxYearProp" value="xpathArrivePathToOpenSecondBoxYear"/>
+    <parameter name="xpathArrivePathToOpenSecondBoxMonthProp" value="xpathArrivePathToOpenSecondBoxMonth"/>
+    <parameter name="arriveDateYearProp" value="arriveDateYear"/>
+    <parameter name="arriveDateMonthFirstLetterCapitalProp" value="arriveDateMonthFirstLetterCapital"/>
+    <parameter name="xpathArrivePathToNextArrowProp" value="xpathArrivePathToNextArrow"/>
+    <parameter name="xpathArriveNumericDatePathFirstBoxProp" value="xpathArriveNumericDatePathFirstBox"/>
+    <parameter name="xpathArriveNumericDatePathSecondBoxProp" value="xpathArriveNumericDatePathSecondBox"/>
+    <parameter name="arriveDateNumericDateProp" value="arriveDateNumericDate"/>
+
+    <parameter name="xpathArriveDatePickerDoneButtonProp" value="xpathArriveDatePickerDoneButton"/>
+    <!-- NoOfPaxTest -->
+    <parameter name="xpathPaxSelectorProp" value="xpathPaxSelector"/>
+    <parameter name="departNoOfPaxProp" value="roundTripNoOfPax"/>
+
+    <parameter name="xpathPathToAllPaxOptionsProp" value="xpathPathToAllPaxOptions"/>
+    <!-- FlightSearchButton -->
+    <parameter name="xpathSearchButtonProp" value="xpathSearchButton"/>
+    <!-- CheckResultsPageTest -->
+    <parameter name="xpathResultsPageNoResultsFoundProp" value="xpathResultsPageNoResultsFound"/>
+    <parameter name="xpathResultsPageFlightsFoundProp" value="xpathResultsPageFlightsFound"/>
+
+    <listeners>
+        <listener class-name="paxTransport.commonCodeFeatures.Listeners"/>
+    </listeners>
+    <test verbose="2" preserve-order="true"
+          name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
+        <classes>
+            <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.TripSelectorTest">
+                <methods>
+                    <exclude name="selectTripTypeDropDown"/>
+                </methods>
+            </class>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest">
+                <methods>
+                    <exclude name="depCityNotDisplayedHandler"/>
+                    <exclude name="arrCityNotDisplayedHandler"/>
+                </methods>
+            </class>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest">
+                <methods>
+                    <exclude name="clickDoneButton"/>
+                </methods>
+            </class>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.ArriveDatePickerTest">
+                <methods>
+                    <exclude name="clickDoneButton"/>
+                </methods>
+            </class>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.NoOfPaxTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.FlightSearchButtonTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.CheckResultsPageTest"/>
+        </classes>
+    </test>
+</suite>

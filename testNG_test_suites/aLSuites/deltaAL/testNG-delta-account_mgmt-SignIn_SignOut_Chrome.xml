@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <!--StartUpTest-->
+    <parameter name="specificPropertiesFile" value="deltaAirLinesProperties.properties"/>
+    <parameter name="browserToUse" value="chrome"/> <!-- Change browser directly here -->
+    <!--SignInSignOutTest-->
+    <parameter name="xpathLogInButtonProp" value="xpathLogInButton"/>
+    <parameter name="xpathUserNameInputBoxProp" value="xpathUserNameInputBox"/>
+    <parameter name="validUserNameProp" value="validUserName"/>
+    <parameter name="xpathPasswordInputBoxProp" value="xpathPasswordInputBox"/>
+    <parameter name="validPasswordProp" value="validPassword"/>
+    <parameter name="xpathLogInSubmitButtonProp" value="xpathLogInSubmitButton"/>
+
+    <parameter name="xpathCloseFeedBackPopUpProp" value="xpathCloseFeedBackPopUp"/>
+    <parameter name="xpathOpenAccountOptionsProp" value="xpathOpenAccountOptions"/>
+    <parameter name="xpathLogOutButtonProp" value="xpathLogOutButton"/>
+    <listeners>
+       <listener class-name="paxTransport.commonCodeFeatures.Listeners"/>
+   </listeners>
+    <test verbose="2" preserve-order="true"
+          name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
+        <classes>
+            <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.account_mgmt.SignInSignOutTest">
+                <methods>
+                    <exclude name="validLastNameInput"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

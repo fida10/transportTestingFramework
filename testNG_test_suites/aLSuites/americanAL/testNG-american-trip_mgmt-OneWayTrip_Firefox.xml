@@ -2,7 +2,8 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testNG-delta-trip_mgmt-OneWayTrip.xml">
     <!-- StartUpTest -->
-    <parameter name="specificPropertiesFile" value="deltaAirLinesProperties.properties"/>
+    <parameter name="specificPropertiesFile" value="americanAirLinesProperties.properties"/>
+    <parameter name="browserToUse" value="firefox"/> <!-- Change browser directly here -->
     <!-- DepartureAndArrivalCityPicker -->
     <parameter name="xpathOpenDepCitySelectorProp" value="xpathOpenDepCitySelector"/>
     <parameter name="depCityCodeProp" value="oneWayDepCityCode"/>
@@ -13,9 +14,7 @@
 
     <parameter name="arrCityCodeProp" value="oneWayArrCityCode"/>
     <parameter name="xpathCityAutoDropDownDynamicXpathProp" value="xpathCityAutoDropDownDynamicXpath"/>
-    <parameter name="xpathCityAutoDropDownCloseXpath" value="xpathCityAutoDropDownCloseXpath"/>
     <!-- TripSelectorTest -->
-    <parameter name="xpathTripTypeSelectorProp" value="xpathTripTypeSelector"/>
     <parameter name="xpathTripTypeOptionSelectorProp" value="xpathTripTypeOneWaySelector"/>
     <!-- DepartDatePickerTest -->
     <parameter name="xpathDepartDatePickerOpenerProp" value="xpathDepartDatePickerOpener"/>
@@ -49,12 +48,25 @@
           name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
         <classes>
             <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPicker"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.TripSelectorTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.TripSelectorTest">
+                <methods>
+                    <exclude name="selectTripTypeDropDown"/>
+                </methods>
+            </class>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest">
+                <methods>
+                    <exclude name="depCityNotDisplayedHandler"/>
+                    <exclude name="arrCityNotDisplayedHandler"/>
+                </methods>
+            </class>
+        <!--    <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest">
+                <methods>
+                    <exclude name="clickDoneButton"/>
+                </methods>
+            </class>
             <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.NoOfPaxTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.FlightSearchButton"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.CheckResultsPageTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.FlightSearchButtonTest"/>
+            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.CheckResultsPageTest"/> -->
         </classes>
     </test>
 </suite>

@@ -21,8 +21,8 @@ public class Initializer {
 		proUniv.load(getPathToProps(nameOfUnivPropFile));
 		proSpecific.load(getPathToProps(nameOfSpecifPropFile));//change based on test suite
 	} //probably the only method in the the entire suite not drawing from properties, because this INITIALIZES properties!
-	private static void webDriverInitializer(){
-		String browserToUse = proUniv.getProperty("browserToUse");
+	private static void webDriverInitializer(String browserToUse){
+		//String browserToUse = proUniv.getProperty("browserToUse"); Formerly used this way, could change the browser from the properties. New format changes browser from testNG xml files directly
 		if (browserToUse.equalsIgnoreCase("chrome")){
 			System.setProperty(proUniv.getProperty("chromeKey"), proUniv.getProperty("chromeDriverPath"));
 			dr = new ChromeDriver();
@@ -31,7 +31,7 @@ public class Initializer {
 			dr = new FirefoxDriver();
 		}
 		dr.manage().deleteAllCookies();
-		dr.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		dr.manage().timeouts().implicitlyWait(6, TimeUnit.SECONDS);
 		dr.manage().window().maximize();
 	}
 	private static void getHomePage(){
@@ -41,9 +41,9 @@ public class Initializer {
 	public static void quitter(){
 		dr.quit();
 	}
-	public static void initialStartUpTasksUnifiedMethod(String nameOfSpecifPropFile) throws IOException {
+	public static void initialStartUpTasksUnifiedMethod(String nameOfSpecifPropFile, String browserToUse) throws IOException {
 		propertiesInitializer("universalProperties.properties", nameOfSpecifPropFile); //as the univeral property file will always stay the same, it can stay fixed pointed towards the universal properties file. The specific prop file is dynamic and is stated as such.
-		webDriverInitializer();
+		webDriverInitializer(browserToUse);
 		getHomePage();
 	}
 }

@@ -8,7 +8,7 @@ import paxTransport.airlines.deltaAirLines.onStartUp.VerificationTest;
 import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
 import static paxTransport.commonWebSiteFeatures.datePicker.TwoBoxDatePicker.twoBoxDatePicker;
 
-public class DepartDatePickerTest extends VerificationTest {
+public class DepartDatePickerTest extends VerificationTest { //the same, only no done button, just a direct click on the dates.
 	@Parameters({"xpathDepartDatePickerOpenerProp", "xpathDepartPathToOpenFirstBoxYearProp", "xpathDepartPathToOpenFirstBoxMonthProp", "xpathDepartPathToOpenSecondBoxYearProp", "xpathDepartPathToOpenSecondBoxMonthProp", "departDateYearProp", "departDateMonthFirstLetterCapitalProp", "xpathDepartPathToNextArrowProp", "xpathDepartNumericDatePathFirstBoxProp", "xpathDepartNumericDatePathSecondBoxProp", "departDateNumericDateProp"})
 	@Test
 	public static void departDatePickerTest(String xpathDepartDatePickerOpenerProp, String xpathDepartPathToOpenFirstBoxYearProp, String xpathDepartPathToOpenFirstBoxMonthProp, String xpathDepartPathToOpenSecondBoxYearProp, String xpathDepartPathToOpenSecondBoxMonthProp, String departDateYearProp, String departDateMonthFirstLetterCapitalProp, String xpathDepartPathToNextArrowProp, String xpathDepartNumericDatePathFirstBoxProp, String xpathDepartNumericDatePathSecondBoxProp, String departDateNumericDateProp){

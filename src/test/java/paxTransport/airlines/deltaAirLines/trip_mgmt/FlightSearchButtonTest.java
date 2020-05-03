@@ -6,7 +6,7 @@ import paxTransport.airlines.deltaAirLines.onStartUp.VerificationTest;
 
 import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
 
-public class FlightSearchButton extends VerificationTest {
+public class FlightSearchButtonTest extends VerificationTest {
 	@Parameters({"xpathSearchButtonProp"})
 	@Test
 	public static void clickFlightSearchButton(String xpathSearchButtonProp){

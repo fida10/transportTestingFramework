@@ -1,5 +1,7 @@
 paxTransport/airlines/deltaAirLines/trip_mgmt/TripSelectorTest.class
+paxTransport/airlines/deltaAirLines/trip_mgmt/FlightSearchButtonTest.class
 paxTransport/airlines/deltaAirLines/trip_mgmt/ArriveDatePickerTest.class
+paxTransport/airlines/deltaAirLines/trip_mgmt/DepartureAndArrivalCityPickerTest.class
 paxTransport/airlines/deltaAirLines/onStartUp/StartUpTest.class
 paxTransport/commonCodeFeatures/ClearFoldersTest.class
 paxTransport/airlines/deltaAirLines/account_mgmt/SignInSignOutTest.class

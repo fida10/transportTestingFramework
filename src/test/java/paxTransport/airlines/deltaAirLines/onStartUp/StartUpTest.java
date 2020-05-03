@@ -10,11 +10,10 @@ import static paxTransport.commonCodeFeatures.Initializer.initialStartUpTasksUni
 import static paxTransport.commonCodeFeatures.Initializer.quitter;
 
 public class StartUpTest {
-
-	@Parameters({"specificPropertiesFile"})
+	@Parameters({"specificPropertiesFile", "browserToUse"})
 	@BeforeSuite
-	public static void initializer(String specificPropertiesFile) throws IOException {
-		initialStartUpTasksUnifiedMethod(specificPropertiesFile);
+	public static void initializer(String specificPropertiesFile, String browserToUse) throws IOException {
+		initialStartUpTasksUnifiedMethod(specificPropertiesFile, browserToUse);
 	}
 	@AfterSuite
 	public static void end(){
