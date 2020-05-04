@@ -1,9 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testNG-delta-trip_mgmt-RoundTrip">
-    <!-- StartUpTest -->
+    <!-- Start Up Test -->
     <parameter name="specificPropertiesFile" value="deltaAirLinesProperties.properties"/>
     <parameter name="browserToUse" value="chrome"/> <!-- Change browser directly here -->
+    <!--Departure and Arrival City Picker Test-->
+    <parameter name="depCityCodeProp" value="roundTripDepCityCode"/>
+    <parameter name="arrCityCodeProp" value="roundTripArrCityCode"/>
+    <!--Trip Type Selector Test-->
+    <parameter name="xpathTripTypeOptionSelectorProp" value="xpathTripTypeRoundTripSelector"/>
+    <!--Depart Date Picker Test-->
+    <parameter name="departDateYearProp" value="roundTripDepartDateYear"/>
+    <parameter name="departDateMonthFirstLetterCapitalProp" value="roundTripDepartDateMonthFirstLetterCapital"/>
+    <parameter name="departDateNumericDateProp" value="roundTripDepartDateNumericDate"/>
+    <!--Return Date Picker Test-->
+    <parameter name="returnDateYearProp" value="roundTripReturnDateYear"/>
+    <parameter name="returnDateMonthFirstLetterCapitalProp" value="roundTripReturnDateMonthFirstLetterCapital"/>
+    <parameter name="returnDateNumericDateProp" value="roundTripReturnDateNumericDate"/>
+    <!--No. of Pax Test-->
+    <parameter name="departNoOfPaxProp" value="roundTripNoOfPax"/>
 
     <listeners>
         <listener class-name="paxTransport.commonCodeFeatures.Listeners"/>

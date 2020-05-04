@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="testNG-delta-trip_mgmt-OneWayTrip.xml">
-    <!-- StartUpTest -->
+    <!-- Start Up Test -->
     <parameter name="specificPropertiesFile" value="deltaAirLinesProperties.properties"/>
     <parameter name="browserToUse" value="firefox"/> <!-- Change browser directly here -->
+    <!--Departure and Arrival City Picker Test-->
+    <parameter name="depCityCodeProp" value="oneWayDepCityCode"/>
+    <parameter name="arrCityCodeProp" value="oneWayArrCityCode"/>
+    <!--Trip Type Selector Test-->
+    <parameter name="xpathTripTypeOptionSelectorProp" value="xpathTripTypeOneWaySelector"/>
+    <!--Depart Date Picker Test-->
+    <parameter name="departDateYearProp" value="oneWayDepartDateYear"/>
+    <parameter name="departDateMonthFirstLetterCapitalProp" value="oneWayDepartDateMonthFirstLetterCapital"/>
+    <parameter name="departDateNumericDateProp" value="oneWayDepartDateNumericDate"/>
+    <!--No. of Pax Test-->
+    <parameter name="departNoOfPaxProp" value="oneWayNoOfPax"/>
 
     <listeners>
         <listener class-name="paxTransport.commonCodeFeatures.Listeners"/>

@@ -10,7 +10,7 @@ import static paxTransport.commonWebSiteFeatures.webElements.isDisplayedLoopThru
 
 public class CheckResultsPageTest { //no verification test extended here as the results page is a brand new page from home.
 	@Test
-	public static void resultsPageAppearsTest(String xpathResultsPageNoResultsFound, String xpathResultsPageFlightsFound){
-		Assert.assertTrue(doesResultPageAppear(xpathResultsPageNoResultsFound, xpathResultsPageFlightsFound));
+	public static void resultsPageAppearsTest(){
+		Assert.assertTrue(doesResultPageAppear("xpathResultsPageNoResultsFound", "xpathResultsPageFlightsFound"));
 	}
 }
