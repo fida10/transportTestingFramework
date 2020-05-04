@@ -4,16 +4,6 @@
     <!--StartUpTest-->
     <parameter name="specificPropertiesFile" value="americanAirLinesProperties.properties"/>
     <parameter name="browserToUse" value="firefox"/> <!-- Change browser directly here -->
-    <!--SignInSignOutTest-->
-    <parameter name="xpathLogInButtonProp" value="xpathLogInButton"/>
-    <parameter name="xpathUserNameInputBoxProp" value="xpathUserNameInputBox"/>
-    <parameter name="validUserNameProp" value="validUserName"/>
-    <parameter name="xpathPasswordInputBoxProp" value="xpathPasswordInputBox"/>
-    <parameter name="validPasswordProp" value="validPassword"/>
-    <parameter name="xpathLastNameInputBoxProp" value="xpathLastNameInputBox"/>
-    <parameter name="validLastNameProp" value="validLastName"/>
-    <parameter name="xpathLogInSubmitButtonProp" value="xpathLogInSubmitButton"/>
-    <parameter name="xpathLogInPageConfirmationElementProp" value="xpathLogInPageConfirmationElement"/>
 
     <parameter name="xpathLogOutButtonProp" value="xpathLogOutButton"/>
     <listeners>

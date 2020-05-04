@@ -12,22 +12,40 @@ import static paxTransport.commonWebSiteFeatures.webElements.ScrollToWebElement.
 import static paxTransport.commonWebSiteFeatures.webElements.isDisplayedLoopThru.checkIfElementIsDisplayed;
 import static paxTransport.commonWebSiteFeatures.webElements.isDisplayedLoopThru.checkIfElementIsDisplayedDirectXpath;
 
-public class ClickAnyButton { //in addition to clicking any button, this class will also scroll to a button if it exists in the page but throws a MoveTargetOutOfBoundsException, and verifies if that element is visible.
+public class ClickAnyButton { //in addition to clicking any button, this class will also scroll to a button if it exists in the page but throws a MoveTargetOutOfBoundsException and is not clickable at first due to this, and verifies if that element is visible.
 	static Actions a = new Actions(dr);
 	public static void clickAnyButton(String xpathButtonProp){
-		a
-				.moveToElement(dr.findElement(By.xpath(proSpecific.getProperty(xpathButtonProp))))
-				.click()
-				.build()
-				.perform();
+		while(true) {
+			try {
+				a
+						.moveToElement(dr.findElement(By.xpath(proSpecific.getProperty(xpathButtonProp))))
+						.click()
+						.build()
+						.perform();
+				break;
+			}
+			catch (MoveTargetOutOfBoundsException e){
+				System.out.println("Element is out of bounds, scrolling to it.");
+				scrollToElement(xpathButtonProp);
+			}
+		}
 	}
 	public static void clickAnyButtonDirectXpath(String xpathButton) { //same as above but uses a direct xpath rather than a property.
 		WebElement buttonToClick = dr.findElement(By.xpath(xpathButton));
-		a
-				.moveToElement(buttonToClick)
-				.click()
-				.build()
-				.perform();
+		while(true) {
+			try {
+				a
+						.moveToElement(buttonToClick)
+						.click()
+						.build()
+						.perform();
+				break;
+			}
+			catch (MoveTargetOutOfBoundsException e){
+				System.out.println("Element is out of bounds, scrolling to it.");
+				scrollToElementDirectXpath(xpathButton);
+			}
+		}
 	}
 }
 /*I want to find a way to
