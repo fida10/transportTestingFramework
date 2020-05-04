@@ -1,4 +1,4 @@
-package paxTransport.airlines.deltaAirLines.onStartUp;
+package paxTransport.commonWebSiteTests.onStartUp;
 
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;

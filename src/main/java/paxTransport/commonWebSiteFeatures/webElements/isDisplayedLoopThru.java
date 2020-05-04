@@ -10,13 +10,17 @@ import org.testng.Assert;
 import static paxTransport.commonCodeFeatures.Initializer.dr;
 import static paxTransport.commonCodeFeatures.Initializer.proSpecific;
 import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
+import static paxTransport.commonWebSiteFeatures.webElements.ConvertPropToWebElement.convertPropToWebElement;
 
 public class isDisplayedLoopThru {
 	static WebElement webElementToCheck;
 	public static boolean checkIfElementIsDisplayed(String xpathWebElementToCheckProp){ //Just checks if an element is displayed. No clicking.
 		boolean isWebElementDisplayed = true; //avoid nullpointerexception by presetting the value
+		WebDriverWait wd = new WebDriverWait(dr, 5);
 		try {
-			webElementToCheck = dr.findElement(By.xpath(proSpecific.getProperty(xpathWebElementToCheckProp))); //finds the webelement to check, and by extension sees if it is displayed.
+			wd.until(ExpectedConditions.visibilityOf(convertPropToWebElement(xpathWebElementToCheckProp)));
+			webElementToCheck = convertPropToWebElement(xpathWebElementToCheckProp);
+			 //finds the webelement to check, and by extension sees if it is displayed. Waits 5 seconds for it to display.
 			System.out.println("Element is displayed, exiting loop.");
 			isWebElementDisplayed = webElementToCheck.isDisplayed(); //if it's displayed, this will display as true
 			} catch (NoSuchElementException e) {
@@ -27,7 +31,9 @@ public class isDisplayedLoopThru {
 	}
 	public static boolean checkIfElementIsDisplayedDirectXpath(String xpathWebElementToCheck){ //Just checks if an element is displayed. No clicking. Same as above but takes a direct xpath, usually created by DynamicXpathCreator
 		boolean isWebElementDisplayed = true; //avoid nullpointerexception by presetting the value
+		WebDriverWait wd = new WebDriverWait(dr, 5);
 		try {
+			wd.until(ExpectedConditions.visibilityOf(dr.findElement(By.xpath(xpathWebElementToCheck))));
 			webElementToCheck = dr.findElement(By.xpath(xpathWebElementToCheck)); //finds the webelement to check, and by extension sees if it is displayed.
 			System.out.println("Element is displayed, exiting loop.");
 			isWebElementDisplayed = webElementToCheck.isDisplayed(); //if it's displayed, this will display as true

@@ -1,3 +1,4 @@
 paxTransport/commonWebSiteFeatures/webElements/ScrollToWebElement.class
+paxTransport/commonWebSiteFeatures/webElements/ConvertPropToWebElement.class
 paxTransport/commonWebSiteFeatures/inputBox/ClearPreFilledInputBox.class
 paxTransport/airlines/deltaAirLines/account_mgmt/SignInSignOut.class

@@ -2,10 +2,13 @@ package paxTransport.commonWebSiteFeatures.inputBox;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static paxTransport.commonCodeFeatures.Initializer.dr;
 import static paxTransport.commonCodeFeatures.Initializer.proSpecific;
 import static paxTransport.commonWebSiteFeatures.inputBox.EnsureValueSentToInputBox.ensureValueSentToInputBox;
+import static paxTransport.commonWebSiteFeatures.webElements.ConvertPropToWebElement.convertPropToWebElement;
 
 public class StaleElementInputBoxHandling {
 	public static void handleStaleElement(String xpathToPotentialStaleElementProp){
@@ -18,10 +21,9 @@ public class StaleElementInputBoxHandling {
 				System.out.println("Stale element exception is thrown, refreshing.");
 				dr.navigate().refresh();
 			}
-
 		}
 	}
-	public static void handleStaleElement_InputBox(String xpathInputBoxProp, String valueToSendProp){ // a unifed method that sends desired values to a specified input box, and checks each step of the way for a stale exception
+	public static void handleStaleElement_InputBox(String xpathInputBoxProp, String valueToSendProp){ // a unified method that sends desired values to a specified input box, and checks each step of the way for a stale exception
 		while(true){
 			try{
 				ensureValueSentToInputBox(xpathInputBoxProp, valueToSendProp);
@@ -31,7 +33,6 @@ public class StaleElementInputBoxHandling {
 				System.out.println("Stale element exception is thrown, refreshing.");
 				dr.navigate().refresh();
 			}
-
 		}
 	}
 }

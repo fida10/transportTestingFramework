@@ -63,31 +63,31 @@
     <test verbose="2" preserve-order="true"
           name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
         <classes>
-            <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.TripSelectorTest">
+            <class name="paxTransport.commonWebSiteTests.onStartUp.StartUpTest"/>
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.TripSelectorTest">
                 <methods>
                     <exclude name="selectTripTypeDropDown"/>
                 </methods>
             </class>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest">
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.DepartureAndArrivalCityPickerTest">
                 <methods>
                     <exclude name="depCityNotDisplayedHandler"/>
                     <exclude name="arrCityNotDisplayedHandler"/>
                 </methods>
             </class>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest">
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.DepartDatePickerTest">
                 <methods>
                     <exclude name="clickDoneButton"/>
                 </methods>
             </class>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.ArriveDatePickerTest">
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.ReturnDatePickerTest">
                 <methods>
                     <exclude name="clickDoneButton"/>
                 </methods>
             </class>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.NoOfPaxTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.FlightSearchButtonTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.trip_mgmt.CheckResultsPageTest"/>
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.NoOfPaxTest"/>
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.FlightSearchButtonTest"/>
+            <class name="paxTransport.commonWebSiteTests.trip_mgmt.CheckResultsPageTest"/>
         </classes>
     </test>
 </suite>

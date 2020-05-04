@@ -26,4 +26,11 @@ public class ScrollToWebElement {
 		w.until(ExpectedConditions.visibilityOf(elementToScrollTo));
 		System.out.println("Successfully scrolled to specified element");
 	}
+	public static void scrollToElementDirectWebElement(WebElement wbToScrollTo){
+		WebDriverWait w = new WebDriverWait(dr, 3);
+		JavascriptExecutor js = ((JavascriptExecutor)dr);
+		js.executeScript("arguments[0].scrollIntoView(true);", wbToScrollTo);
+		w.until(ExpectedConditions.visibilityOf(wbToScrollTo));
+		System.out.println("Successfully scrolled to specified element");
+	}
 }

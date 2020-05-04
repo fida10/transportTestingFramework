@@ -1,6 +1,8 @@
 package paxTransport.commonCodeFeatures;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -9,11 +11,13 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import static paxTransport.commonCodeFeatures.HelperMethods.getPathToProps;
+import static paxTransport.commonWebSiteFeatures.webElements.ConvertPropToWebElement.convertPropToWebElement;
 
 public class Initializer {
 	public static Properties proUniv;
 	public static Properties proSpecific;
 	public static WebDriver dr;
+	public static WebElement nextWebElement; //a common reference point for all tests
 	private static void propertiesInitializer(String nameOfUnivPropFile, String nameOfSpecifPropFile) throws IOException {
 		proUniv = new Properties(); //declare these and avoid nullpointerexception
 		proSpecific = new Properties();
@@ -37,6 +41,7 @@ public class Initializer {
 	private static void getHomePage(){
 		String homeURL = proSpecific.getProperty("homeURL");
 		dr.get(homeURL);
+		nextWebElement = convertPropToWebElement("xpathAReliableElement");
 	}
 	public static void quitter(){
 		dr.quit();

@@ -13,6 +13,7 @@
     <parameter name="xpathLastNameInputBoxProp" value="xpathLastNameInputBox"/>
     <parameter name="validLastNameProp" value="validLastName"/>
     <parameter name="xpathLogInSubmitButtonProp" value="xpathLogInSubmitButton"/>
+    <parameter name="xpathLogInPageConfirmationElementProp" value="xpathLogInPageConfirmationElement"/>
 
     <parameter name="xpathLogOutButtonProp" value="xpathLogOutButton"/>
     <listeners>
@@ -21,11 +22,12 @@
     <test verbose="2" preserve-order="true"
           name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework">
         <classes>
-            <class name="paxTransport.airlines.deltaAirLines.onStartUp.StartUpTest"/>
-            <class name="paxTransport.airlines.deltaAirLines.account_mgmt.SignInSignOutTest">
+            <class name="paxTransport.commonWebSiteTests.onStartUp.StartUpTest"/>
+            <class name="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest">
                 <methods>
                     <exclude name="closeLoginSurveyBox"/>
                     <exclude name="displayLogOutButton"/>
+                    <exclude name="nextWebElementPointerThree"/>
                 </methods>
             </class>
         </classes>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="41.627" tests="15" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="TestSuite" time="23.398" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="webdriver.chrome.driver" value="drivers//chromedriver"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/Library/Java/JavaVirtualMachines/jdk-14.0.1.jdk/Contents/Home/lib"/>
-    <property name="sun.java.command" value="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire/surefirebooter6379579229446819532.jar /Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire 2020-05-03T05-34-20_796-jvmRun1 surefire10743419241816404212tmp surefire_014342154641371356562tmp"/>
+    <property name="sun.java.command" value="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire/surefirebooter16803709815231775224.jar /Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire 2020-05-04T17-28-01_506-jvmRun1 surefire11165848838662542682tmp surefire_01170334347864889858tmp"/>
     <property name="http.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/test-classes:/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/classes:/Users/fida10/.m2/repository/junit/junit/3.8.1/junit-3.8.1.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-java/3.141.59/selenium-java-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-api/3.141.59/selenium-api-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-chrome-driver/3.141.59/selenium-chrome-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-edge-driver/3.141.59/selenium-edge-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-firefox-driver/3.141.59/selenium-firefox-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-ie-driver/3.141.59/selenium-ie-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-opera-driver/3.141.59/selenium-opera-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-remote-driver/3.141.59/selenium-remote-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-safari-driver/3.141.59/selenium-safari-driver-3.141.59.jar:/Users/fida10/.m2/repository/org/seleniumhq/selenium/selenium-support/3.141.59/selenium-support-3.141.59.jar:/Users/fida10/.m2/repository/net/bytebuddy/byte-buddy/1.8.15/byte-buddy-1.8.15.jar:/Users/fida10/.m2/repository/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar:/Users/fida10/.m2/repository/com/google/guava/guava/25.0-jre/guava-25.0-jre.jar:/Users/fida10/.m2/repository/com/google/code/findbugs/jsr305/1.3.9/jsr305-1.3.9.jar:/Users/fida10/.m2/repository/org/checkerframework/checker-compat-qual/2.0.0/checker-compat-qual-2.0.0.jar:/Users/fida10/.m2/repository/com/google/errorprone/error_prone_annotations/2.1.3/error_prone_annotations-2.1.3.jar:/Users/fida10/.m2/repository/com/google/j2objc/j2objc-annotations/1.1/j2objc-annotations-1.1.jar:/Users/fida10/.m2/repository/org/codehaus/mojo/animal-sniffer-annotations/1.14/animal-sniffer-annotations-1.14.jar:/Users/fida10/.m2/repository/com/squareup/okhttp3/okhttp/3.11.0/okhttp-3.11.0.jar:/Users/fida10/.m2/repository/com/squareup/okio/okio/1.14.0/okio-1.14.0.jar:/Users/fida10/.m2/repository/org/testng/testng/7.1.0/testng-7.1.0.jar:/Users/fida10/.m2/repository/com/beust/jcommander/1.72/jcommander-1.72.jar:/Users/fida10/.m2/repository/com/google/inject/guice/4.1.0/guice-4.1.0-no_aop.jar:/Users/fida10/.m2/repository/org/yaml/snakeyaml/1.21/snakeyaml-1.21.jar:/Users/fida10/.m2/repository/com/google/inject/guice/4.2.3/guice-4.2.3.jar:/Users/fida10/.m2/repository/javax/inject/javax.inject/1/javax.inject-1.jar:/Users/fida10/.m2/repository/aopalliance/aopalliance/1.0/aopalliance-1.0.jar:/Users/fida10/.m2/repository/commons-io/commons-io/2.6/commons-io-2.6.jar:"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire/surefirebooter6379579229446819532.jar"/>
+    <property name="surefire.real.class.path" value="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework/target/surefire/surefirebooter16803709815231775224.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.runtime.version" value="14.0.1+7"/>
@@ -55,19 +55,10 @@
     <property name="socksNonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="openDepCityOptions" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="2.395"/>
-  <testcase name="sendKeysDynamicXpathToDepCity" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.568"/>
-  <testcase name="depCityNotDisplayedHandler" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.348"/>
-  <testcase name="selectDepCity" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="2.017"/>
-  <testcase name="openArrCityOptions" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.515"/>
-  <testcase name="sendKeysDynamicXpathToArrCity" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.193"/>
-  <testcase name="arrCityNotDisplayedHandler" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.124"/>
-  <testcase name="selectArrCity" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartureAndArrivalCityPickerTest" time="1.996"/>
-  <testcase name="selectTripTypeDropDown" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.TripSelectorTest" time="2.244"/>
-  <testcase name="departDatePickerTest" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest" time="1.74"/>
-  <testcase name="clickDoneButton" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.DepartDatePickerTest" time="1.645"/>
-  <testcase name="openPaxBox" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.NoOfPaxTest" time="1.619"/>
-  <testcase name="selectPaxNo" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.NoOfPaxTest" time="1.744"/>
-  <testcase name="clickFlightSearchButton" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.FlightSearchButtonTest" time="2.447"/>
-  <testcase name="resultsPageAppearsTest" classname="paxTransport.airlines.deltaAirLines.trip_mgmt.CheckResultsPageTest" time="12.825"/>
+  <testcase name="validLoginTest" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="4.27"/>
+  <testcase name="clickLoginSubmitButton" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="2.134"/>
+  <testcase name="closeLoginSurveyBox" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="7.006"/>
+  <testcase name="displayLogOutButton" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="1.115"/>
+  <testcase name="logOut" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="1.621"/>
+  <testcase name="logoutConfirmationPage" classname="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest" time="1.959"/>
 </testsuite>
