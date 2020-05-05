@@ -14,9 +14,10 @@ public class TripSelectorTest extends VerificationTest {
 		nextWebElement = convertToWebElement(xpathTripTypeOptionSelector);
 	} /*A common web element. A nextWebElementPointer method will set this as the first webElement used for the next test. @BeforeMethods can then be used to run various actions on the element, i.e. check it's visibility, if it is enabled, scroll to it, etc.
 	 It is set to commonElementOnAllWebSites which points to //html. This is a common element present on every website, and it also ensures that nullpointerexception is avoided.*/
+	@Parameters({"xpathTripTypeOptionSelectorProp"}) //Type of trip needs to be specified
 	@Test
-	public static void selectTripTypeButton(){ //this method is for if the trip type is a radio button or just a button.
-		clickAnyButton("xpathTripTypeOptionSelector");
+	public static void selectTripTypeButton(String xpathTripTypeOptionSelectorProp){ //this method is for if the trip type is a radio button or just a button.
+		clickAnyButton(xpathTripTypeOptionSelectorProp);
 	}
 /*	@Parameters({"xpathTripTypeSelector"})
 	@Test (priority = 0)

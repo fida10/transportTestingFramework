@@ -10,4 +10,12 @@ public class DynamicXpathCreator {
 		System.out.println("Dynamic xpath created: " + fullXpath);
 		return fullXpath;
 	}
+	public static String simpleDynamicXpathCreatorDirectText(String xpathDynamicXpath, String noProp){ //this one takes direct strings, not properties.
+		//consider that there are numerous options in a dropdown menu, but they are all similar (i.e. 1 pax, 2 pax, 3 pax, etc). Instead of making an xpath for each of these, it is better to make a dynamic xpath that can be changed through properties to select what we want. That is the goal for this method.
+		//noProp is the differentiator that separates the various elements on this path, which are identical otherwise. It substitutes %s.
+
+		String fullXpath = String.format((xpathDynamicXpath).concat(" '%s')]"), noProp);
+		System.out.println("Dynamic xpath created: " + fullXpath);
+		return fullXpath;
+	}
 }

@@ -4,42 +4,15 @@
     <!-- StartUpTest -->
     <parameter name="specificPropertiesFile" value="americanAirLinesProperties.properties"/>
     <parameter name="browserToUse" value="chrome"/> <!-- Change browser directly here -->
-    <!-- DepartureAndArrivalCityPicker -->
-    <parameter name="xpathOpenDepCitySelectorProp" value="xpathOpenDepCitySelector"/>
-    <parameter name="depCityCodeProp" value="oneWayDepCityCode"/>
-    <parameter name="xpathCityAutoDropDownDynamicXpathProp" value="xpathCityAutoDropDownDynamicXpath"/>
-    <parameter name="xpathCityAutoDropDownCloseXpathProp" value="xpathCityAutoDropDownCloseXpath"/>
-
-    <parameter name="xpathOpenArrCitySelectorProp" value="xpathOpenArrCitySelector"/>
-
-    <parameter name="arrCityCodeProp" value="oneWayArrCityCode"/>
-    <parameter name="xpathCityAutoDropDownDynamicXpathProp" value="xpathCityAutoDropDownDynamicXpath"/>
-    <!-- TripSelectorTest -->
+    <!--Trip Type Selector Test-->
     <parameter name="xpathTripTypeOptionSelectorProp" value="xpathTripTypeOneWaySelector"/>
-    <!-- DepartDatePickerTest -->
-    <parameter name="xpathDepartDatePickerOpenerProp" value="xpathDepartDatePickerOpener"/>
-    <parameter name="xpathDepartPathToOpenFirstBoxYearProp" value="xpathDepartPathToOpenFirstBoxYear"/>
-    <parameter name="xpathDepartPathToOpenFirstBoxMonthProp" value="xpathDepartPathToOpenFirstBoxMonth"/>
-    <parameter name="xpathDepartPathToOpenSecondBoxYearProp" value="xpathDepartPathToOpenSecondBoxYear"/>
-    <parameter name="xpathDepartPathToOpenSecondBoxMonthProp" value="xpathDepartPathToOpenSecondBoxMonth"/>
-    <parameter name="departDateYearProp" value="departDateYear"/>
-    <parameter name="departDateMonthFirstLetterCapitalProp" value="departDateMonthFirstLetterCapital"/>
-    <parameter name="xpathDepartPathToNextArrowProp" value="xpathDepartPathToNextArrow"/>
-    <parameter name="xpathDepartNumericDatePathFirstBoxProp" value="xpathDepartNumericDatePathFirstBox"/>
-    <parameter name="xpathDepartNumericDatePathSecondBoxProp" value="xpathDepartNumericDatePathSecondBox"/>
-    <parameter name="departDateNumericDateProp" value="departDateNumericDate"/>
-
-    <parameter name="xpathDepartDatePickerDoneButtonProp" value="xpathDepartDatePickerDoneButton"/>
-    <!-- NoOfPaxTest -->
-    <parameter name="xpathPaxSelectorProp" value="xpathPaxSelector"/>
-    <parameter name="departNoOfPaxProp" value="oneWayNoOfPax"/>
-
-    <parameter name="xpathPathToAllPaxOptionsProp" value="xpathPathToAllPaxOptions"/>
-    <!-- FlightSearchButton -->
-    <parameter name="xpathSearchButtonProp" value="xpathSearchButton"/>
-    <!-- CheckResultsPageTest -->
-    <parameter name="xpathResultsPageNoResultsFoundProp" value="xpathResultsPageNoResultsFound"/>
-    <parameter name="xpathResultsPageFlightsFoundProp" value="xpathResultsPageFlightsFound"/>
+    <!--Departure and Arrival City Picker Test-->
+    <parameter name="depCityCodeProp" value="oneWayDepCityCode"/>
+    <parameter name="arrCityCodeProp" value="oneWayArrCityCode"/>
+    <!--Departure Date Picker Test-->
+    <parameter name="departDateYearProp" value="oneWayDepartDateYear"/>
+    <parameter name="departDateMonthFirstLetterCapitalProp" value="oneWayDepartDateMonthFirstLetterCapital"/>
+    <parameter name="departDateNumericDateProp" value="oneWayDepartDateNumericDate"/>
 
     <listeners>
         <listener class-name="paxTransport.commonCodeFeatures.Listeners"/>

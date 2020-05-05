@@ -12,6 +12,9 @@ import java.util.List;
 import static paxTransport.commonCodeFeatures.Initializer.dr;
 import static paxTransport.commonCodeFeatures.Initializer.proSpecific;
 import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButton;
+import static paxTransport.commonWebSiteFeatures.clicking.ClickAnyButton.clickAnyButtonDirectXpath;
+import static paxTransport.commonWebSiteFeatures.webElements.DynamicXpathCreator.simpleDynamicXpathCreator;
+import static paxTransport.commonWebSiteFeatures.webElements.DynamicXpathCreator.simpleDynamicXpathCreatorDirectText;
 import static paxTransport.commonWebSiteFeatures.webElements.isDisplayedLoopThru.checkIfElementIsDisplayedDirectXpath;
 
 public class TwoBoxDatePicker {
@@ -31,7 +34,7 @@ public class TwoBoxDatePicker {
 		String desiredDepartDateYear = proSpecific.getProperty(departDesiredDateYearProp);
 		String desiredDepartDateMonth = proSpecific.getProperty(departDesiredDateMonthFirstLetterCapitalProp); //these two strings store the date and year being tested for, gotten from properties
 		String nextArrowXpath = proSpecific.getProperty(xpathDatePickerNextArrowProp);
-		WebElement nextArrow = dr.findElement(By.xpath(nextArrowXpath)); //the arrow that moves the datepicker to the next month
+		//the arrow that moves the datepicker to the next month
 
 		List<String> monthStorageList = new ArrayList<>();
 		monthStorageList.add("dummyMonthOne");
@@ -43,7 +46,7 @@ public class TwoBoxDatePicker {
 		boolean endOfDatePickerReached = false; //given an initial value of false as the datepicker doesn't start at the end!
 		//a key part in determining the end of the list
 
-		while (true) {
+		while (true) { //causes the loop to cease cycling if the desired month and date are in the first box, right from the start.
 			if (firstBoxYear.contains(desiredDepartDateYear) && firstBoxMonth.contains(desiredDepartDateMonth)) { //checks if the month and year in the first box of the datepicker matches the specified month and year in properties
 				System.out.println("Desired date is on the first box, selecting date and ending loop");
 				selectDate(xpathDepartNumericDatePathFirstBoxProp, departDateNumericDateProp); //selects the date, from the first box
@@ -79,19 +82,14 @@ public class TwoBoxDatePicker {
 				System.out.println("Reached the end of the datepicker, invalid desired date provided");
 				break;
 			} //Breaks the loop if the end of datepicker has been reached.
-			a
-					.moveToElement(nextArrow)
-					.click()
-					.build()
-					.perform();
+			clickAnyButtonDirectXpath(nextArrowXpath);
 		}
 		return endOfDatePickerReached; //for use in the actual test. If the end of the datepicker was reached, an invalid date was given and this boolean can be used to make the test fail.
 	}
-	private static void selectDate(String xpathPathToDatesProp, String numericDateProp){
-		String xpathToDates = (proSpecific.getProperty(xpathPathToDatesProp)).concat("'%s']"); //as this xpath is always dynamic, we can leave the '%s'] part fixed as the xpaths will be written to always have that incorporated at the end.
+	private static void selectDate(String xpathPathToDatesProp, String numericDateProp){ //in future, try to integrate dynamic xpath creator method to do this directly
+		String xpathToDates = (proSpecific.getProperty(xpathPathToDatesProp));
 		String dateToClick = proSpecific.getProperty(numericDateProp);
-
-		WebElement dateToPick = dr.findElement(By.xpath(String.format(xpathToDates, dateToClick)));
+		WebElement dateToPick = dr.findElement(By.xpath(simpleDynamicXpathCreatorDirectText(xpathToDates, dateToClick))); //generates an xpath using the dynamic path to the dates, and the date itself. Note that the xpath will end in '%s')]. Note the extra ')' and write xpathPathToDatesProp accordingly in properties
 		a
 				.moveToElement(dateToPick)
 				.click()

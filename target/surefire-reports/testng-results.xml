@@ -2,12 +2,12 @@
 <testng-results ignored="2" total="7" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-05-04T19:30:55 EDT" name="All Test Suite" finished-at="2020-05-04T19:31:12 EDT" duration-ms="16700">
+  <suite started-at="2020-05-04T22:59:09 EDT" name="All Test Suite" finished-at="2020-05-04T22:59:23 EDT" duration-ms="14037">
     <groups>
     </groups>
-    <test started-at="2020-05-04T19:30:55 EDT" name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework" finished-at="2020-05-04T19:31:12 EDT" duration-ms="16700">
+    <test started-at="2020-05-04T22:59:09 EDT" name="/Users/fida10/Programming/JavaProjects/MavenProjects/UnifiedAirLinesFrameWork/transportTestingFramework" finished-at="2020-05-04T22:59:23 EDT" duration-ms="14037">
       <class name="paxTransport.commonWebSiteTests.onStartUp.StartUpTest">
-        <test-method is-config="true" signature="initializer(java.lang.String, java.lang.String)[pri:0, instance:paxTransport.commonWebSiteTests.onStartUp.StartUpTest@1dd02175]" started-at="2020-05-04T19:30:46 EDT" name="initializer" finished-at="2020-05-04T19:30:55 EDT" duration-ms="9095" status="PASS">
+        <test-method is-config="true" signature="initializer(java.lang.String, java.lang.String)[pri:0, instance:paxTransport.commonWebSiteTests.onStartUp.StartUpTest@1dd02175]" started-at="2020-05-04T22:58:59 EDT" name="initializer" finished-at="2020-05-04T22:59:09 EDT" duration-ms="9244" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -23,33 +23,33 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializer -->
-        <test-method is-config="true" signature="end()[pri:0, instance:paxTransport.commonWebSiteTests.onStartUp.StartUpTest@1dd02175]" started-at="2020-05-04T19:31:12 EDT" name="end" finished-at="2020-05-04T19:31:15 EDT" duration-ms="2883" status="PASS">
+        <test-method is-config="true" signature="end()[pri:0, instance:paxTransport.commonWebSiteTests.onStartUp.StartUpTest@1dd02175]" started-at="2020-05-04T22:59:23 EDT" name="end" finished-at="2020-05-04T22:59:27 EDT" duration-ms="3961" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- end -->
       </class> <!-- paxTransport.commonWebSiteTests.onStartUp.StartUpTest -->
       <class name="paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest">
-        <test-method is-config="true" signature="urlVerificationTest()[pri:0, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:30:55 EDT" name="urlVerificationTest" finished-at="2020-05-04T19:30:55 EDT" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="urlVerificationTest()[pri:0, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:09 EDT" name="urlVerificationTest" finished-at="2020-05-04T22:59:09 EDT" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- urlVerificationTest -->
-        <test-method signature="validLoginTest()[pri:1, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:30:55 EDT" name="validLoginTest" finished-at="2020-05-04T19:30:58 EDT" duration-ms="3104" status="PASS">
+        <test-method signature="validLoginTest()[pri:1, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:09 EDT" name="validLoginTest" finished-at="2020-05-04T22:59:12 EDT" duration-ms="3157" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLoginTest -->
-        <test-method signature="validLastNameInput()[pri:3, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:30:58 EDT" name="validLastNameInput" finished-at="2020-05-04T19:30:59 EDT" duration-ms="465" status="PASS">
+        <test-method signature="validLastNameInput()[pri:3, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:12 EDT" name="validLastNameInput" finished-at="2020-05-04T22:59:13 EDT" duration-ms="437" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- validLastNameInput -->
-        <test-method signature="clickLoginSubmitButton()[pri:5, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:30:59 EDT" name="clickLoginSubmitButton" finished-at="2020-05-04T19:30:59 EDT" duration-ms="473" status="PASS">
+        <test-method signature="clickLoginSubmitButton()[pri:5, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:13 EDT" name="clickLoginSubmitButton" finished-at="2020-05-04T22:59:13 EDT" duration-ms="434" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- clickLoginSubmitButton -->
-        <test-method signature="logOut()[pri:10, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:31:00 EDT" name="logOut" finished-at="2020-05-04T19:31:06 EDT" duration-ms="6317" status="PASS">
+        <test-method signature="logOut()[pri:10, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:14 EDT" name="logOut" finished-at="2020-05-04T22:59:18 EDT" duration-ms="4874" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logOut -->
-        <test-method signature="logoutConfirmationPage()[pri:11, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T19:31:06 EDT" name="logoutConfirmationPage" finished-at="2020-05-04T19:31:11 EDT" duration-ms="4457" status="PASS">
+        <test-method signature="logoutConfirmationPage()[pri:11, instance:paxTransport.commonWebSiteTests.account_mgmt.SignInSignOutTest@3ffcd140]" started-at="2020-05-04T22:59:19 EDT" name="logoutConfirmationPage" finished-at="2020-05-04T22:59:22 EDT" duration-ms="2960" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutConfirmationPage -->
